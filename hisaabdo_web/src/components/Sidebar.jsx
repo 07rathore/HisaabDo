@@ -116,9 +116,11 @@ export default function Sidebar({ activeTab, setActiveTab, summary, collapsed, s
       {/* Brand Identity */}
       <div>
         <div className="h-16 flex items-center px-4 border-b border-slate-200/80 dark:border-slate-800 gap-3">
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-600 via-indigo-700 to-violet-700 flex items-center justify-center text-white font-black text-base shadow-md shadow-indigo-500/25 shrink-0 tracking-tight">
-            HD
-          </div>
+          <img
+            src="/hisaabdo-mark.svg"
+            alt="HisaabDo logo"
+            className="w-10 h-10 shrink-0 object-contain"
+          />
           {!collapsed && (
             <div className="overflow-hidden">
               <div className="flex items-center gap-1.5">
