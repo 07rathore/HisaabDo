@@ -1,0 +1,28 @@
+# Node & Frontend
+node_modules/
+hisaabdo_web/node_modules/
+hisaabdo_web/dist/
+hisaabdo_web/dist-ssr/
+*.local
+
+# Python & ML
+__pycache__/
+engine/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+
+# Environment variables & Keys
+.env
+.env.local
+.env.production
+
+# IDE & OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
