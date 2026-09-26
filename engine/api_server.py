@@ -8,10 +8,24 @@ import numpy as np
 
 app = FastAPI(title="HisaabDo MPLADS AI Engine", version="2.0.0")
 
+
+def get_allowed_origins():
+    raw = os.getenv("CORS_ORIGINS", "http://localhost:5173,http://127.0.0.1:5173")
+    if raw.strip() == "*":
+        return ["*"]
+
+    origins = []
+    for origin in raw.split(","):
+        item = origin.strip()
+        if item:
+            origins.append(item)
+    return origins or ["http://localhost:5173", "http://127.0.0.1:5173"]
+
+
 # Enable CORS for frontend
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=get_allowed_origins(),
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
